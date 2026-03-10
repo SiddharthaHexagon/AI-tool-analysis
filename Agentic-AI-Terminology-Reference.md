@@ -1,0 +1,112 @@
+### Agentic AI Terminology Reference
+________________________________________
+# Core Concepts
+Agent — An AI system that perceives its environment, makes decisions, and takes actions to achieve goals, often autonomously over multiple steps.
+Agentic AI — AI that operates with greater autonomy, executes multi-step tasks, and can use tools, memory, and reasoning to accomplish complex objectives.
+Autonomy — The degree to which an agent acts independently without human intervention.
+Goal-directed behavior — Acting in pursuit of a defined objective rather than simply responding to a single prompt.
+Agent loop — The recurring cycle an agent runs through: receive input → reason → act → observe → repeat. Continues until the goal is achieved or a stopping condition is met.
+Task horizon — How far ahead an agent plans. Short-horizon agents react step-by-step; long-horizon agents plan across many future steps.
+Statefulness — Whether an agent maintains context and memory between interactions. Stateless agents treat every call independently; stateful agents accumulate history.
+Embodied agent — An agent situated in a physical or simulated environment (e.g., robotics, video games), as opposed to a purely language-based agent.
+Cognitive architecture — The overall structure governing how an agent perceives, reasons, remembers, and acts (e.g., BDI — Belief, Desire, Intention).
+Intentionality — The agent’s capacity to form and pursue goals, not just react to inputs.
+Emergent behavior — Capabilities or behaviors that arise from a system’s complexity and were not explicitly programmed, often seen in large multi-agent systems.
+Agency spectrum — A continuum from fully passive (answering one question) to fully autonomous (self-directed, long-running goal pursuit).
+________________________________________
+# Architecture & Components
+Context window — The fixed amount of text/tokens an LLM-based agent can “see” at once. Managing what goes in and out of this window is critical for long tasks.
+Retrieval-Augmented Generation (RAG) — Augmenting an agent’s responses by retrieving relevant documents from an external knowledge base at query time.
+Vector store — A database that stores embeddings (numerical representations of text) to enable fast semantic search for memory retrieval.
+Embedding — A high-dimensional numerical representation of text, used to measure semantic similarity between pieces of information.
+Router — A component that decides which agent, tool, or workflow should handle a given input.
+Tool registry — A catalog of available tools an agent can call, including their names, descriptions, and input/output schemas.
+Schema / Function signature — The structured definition of a tool’s inputs and outputs that the agent uses to call it correctly.
+Prompt template — A reusable, parameterized instruction structure used to consistently format inputs to the agent.
+System prompt — The foundational instruction set that defines an agent’s persona, constraints, and behavioral guidelines.
+Long-term memory (LTM) — Persistent storage of information across sessions, enabling agents to recall past interactions or learned facts.
+Working memory — The active, short-term information an agent holds during a single task or session, typically in-context.
+Episodic memory — Memory of specific past events or interactions, allowing an agent to recall what happened before.
+Semantic memory — General world knowledge the agent has, either from training or retrieved from a knowledge base.
+Orchestrator — A system that coordinates multiple agents or steps toward a broader goal.
+Subagent — A specialized agent spawned or directed by an orchestrator to handle a specific subtask.
+Planner — A component that breaks high-level goals into actionable subtasks or steps.
+Executor — The component that carries out individual actions or tool calls.
+________________________________________
+3. Reasoning & Decision-Making
+ReAct (Reason + Act) — A prompting framework where the agent alternates between reasoning about a situation and taking an action.
+Chain-of-Thought (CoT) — Prompting the model to reason step-by-step before arriving at a final answer or action.
+Tree of Thoughts (ToT) — Exploring multiple reasoning branches simultaneously to find the best path.
+Reflection / Self-critique — An agent reviewing its own outputs or actions and revising them.
+Scratchpad — A working space where an agent records intermediate reasoning or partial results.
+Zero-shot reasoning — The agent attempts a task with no examples, relying purely on instruction and prior training.
+Few-shot reasoning — Providing the agent with a small number of examples within the prompt to guide its reasoning style.
+Self-consistency — Sampling multiple reasoning paths and selecting the most common answer, improving reliability.
+Least-to-most prompting — Breaking a complex problem into easier subproblems, solving them sequentially from simplest to hardest.
+Decomposition — The process of splitting a large goal into smaller, more manageable subtasks.
+Backtracking — When an agent recognizes a failed path and returns to a previous decision point to try a different approach.
+Hypothetical reasoning — The agent simulates “what if” scenarios before committing to an action.
+Metacognition — The agent’s ability to reason about its own reasoning — knowing what it knows, what it doesn’t, and how confident it is.
+Uncertainty estimation — Quantifying how confident an agent is in a given output or decision, used to decide whether to proceed or seek clarification.
+Plan-and-execute — A two-phase pattern where the agent first creates a complete plan, then executes each step, rather than deciding on the fly.
+Dynamic replanning — Updating the plan mid-execution in response to unexpected observations or failures.
+Reward model — A model trained to score outputs based on human preferences, used to guide agent behavior toward desirable outcomes (common in RLHF).
+________________________________________
+4. Multi-Agent Systems
+Multi-agent framework — A system with multiple AI agents collaborating or competing to solve problems.
+Human-in-the-loop (HITL) — A design where humans review or approve agent actions at key decision points.
+Handoff — Transferring control or context from one agent (or human) to another.
+Consensus — When multiple agents must agree before an action is taken.
+Agent topology — The structural arrangement of agents: hierarchical (boss/worker), peer-to-peer, pipeline, or hub-and-spoke.
+Supervisor agent — A higher-level agent that assigns tasks to, monitors, and evaluates subagents.
+Debate / Adversarial agents — Two or more agents that argue opposing positions to surface better answers or catch errors.
+Swarm intelligence — Emergent collective behavior arising from many simple agents interacting, inspired by natural systems like ant colonies.
+Specialization — Agents designed to excel at specific domains (e.g., a code agent, a research agent, a summarization agent).
+Message passing — The mechanism by which agents communicate, share context, or hand off tasks to one another.
+Shared memory / Blackboard — A common data store accessible to all agents in a system, used to coordinate without direct communication.
+Agent persona — A defined identity, role, and communication style assigned to an agent to guide its behavior in context.
+Task decomposition graph — A directed graph representing how a complex task is broken into subtasks assigned to different agents.
+Quorum — A multi-agent decision pattern requiring a minimum number of agents to agree before proceeding with a high-stakes action.
+Inter-agent trust — The degree to which one agent accepts instructions or outputs from another without independent verification.
+________________________________________
+5. Execution & Environment
+Tool call / API call — A structured request an agent makes to an external system (web search, calculator, database, etc.) to retrieve information or trigger an action.
+Action space — The set of all possible actions an agent can take in a given environment.
+Environment — The external system the agent interacts with (a web browser, file system, API, etc.).
+Grounding — Connecting the agent’s outputs to real-world data or actions.
+Observation — Information the agent receives from the environment after taking an action.
+Feedback loop — The cycle of action → observation → updated reasoning.
+Side effects — Changes an agent’s actions make in the real world (sending an email, deleting a file) that may be difficult or impossible to reverse.
+Reversibility — Whether an action can be undone. Agents should prefer reversible actions when uncertain.
+Dry run / Simulation — Executing a plan in a simulated environment before applying it to the real world to catch errors early.
+Environment state — A snapshot of the current condition of the environment the agent is operating in.
+Observation space — The set of all possible inputs or signals the agent can receive from its environment.
+Latency — The time delay between an agent’s action and receiving a response, which can affect planning and user experience.
+Rate limiting — External constraints on how often an agent can call a tool or API, requiring throttling logic.
+Retry logic — The mechanism by which an agent handles failures by attempting an action again, often with exponential backoff.
+Event-driven agents — Agents triggered by external events (a new email, a webhook, a schedule) rather than direct user prompts.
+Containerization — Running agent code in isolated containers (e.g., Docker) to control resources and prevent interference with other systems.
+Code execution environment — A sandboxed runtime where an agent can write and run code safely (e.g., Python REPL, Jupyter kernel).
+________________________________________
+6. Safety & Control
+Guardrails — Constraints that limit what an agent can do or say.
+Sandboxing — Running an agent in an isolated environment to prevent unintended side effects.
+Corrigibility — The degree to which an agent can be corrected, adjusted, or shut down by humans.
+Alignment — Ensuring the agent’s goals and behaviors match human intentions and values.
+Prompt injection — An attack where malicious content in the environment hijacks the agent’s instructions.
+Minimal footprint — The principle that agents should request only the permissions they need and avoid accumulating resources or influence beyond the task.
+Least privilege — Granting an agent only the minimum access rights required for its current task.
+Human oversight — Mechanisms ensuring humans can monitor, intervene in, and override agent behavior at any point.
+Tripwire — A predefined condition that, when triggered, automatically pauses the agent and alerts a human.
+Red-teaming — Deliberately adversarial testing of an agent to uncover vulnerabilities, failure modes, or unsafe behaviors.
+Jailbreaking — Attempts by users to bypass an agent’s safety constraints through clever prompting.
+Indirect prompt injection — When malicious instructions are embedded in external content (a webpage, document) the agent reads, hijacking its behavior.
+Constitutional AI — A training approach where the model is guided by a set of principles to self-critique and revise its outputs toward safer behavior.
+Value alignment — Ensuring agent objectives and behaviors reflect human values, not just literal interpretations of instructions.
+Specification gaming — When an agent achieves its stated objective in an unintended or harmful way by exploiting loopholes in how the goal was defined.
+Reward hacking — A form of specification gaming where an agent exploits the reward signal rather than genuinely achieving the intended goal.
+Kill switch — A hard shutdown mechanism that can immediately stop an agent’s operation.
+Audit trail / Logging — A complete record of all agent actions, tool calls, and decisions, used for debugging and accountability.
+Explainability — The degree to which an agent’s reasoning and decisions can be understood and interpreted by humans.
+Containment — Restricting what systems, data, or networks an agent can access to limit the blast radius of failures or misuse.
+Overhang risk — The danger of deploying a highly capable agent before adequate safety measures are in place.
