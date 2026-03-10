@@ -1,6 +1,6 @@
-### Agentic AI Terminology Reference
+Agentic AI Terminology Reference
 ________________________________________
-# Core Concepts
+1. Core Concepts
 Agent — An AI system that perceives its environment, makes decisions, and takes actions to achieve goals, often autonomously over multiple steps.
 Agentic AI — AI that operates with greater autonomy, executes multi-step tasks, and can use tools, memory, and reasoning to accomplish complex objectives.
 Autonomy — The degree to which an agent acts independently without human intervention.
@@ -14,7 +14,7 @@ Intentionality — The agent’s capacity to form and pursue goals, not just rea
 Emergent behavior — Capabilities or behaviors that arise from a system’s complexity and were not explicitly programmed, often seen in large multi-agent systems.
 Agency spectrum — A continuum from fully passive (answering one question) to fully autonomous (self-directed, long-running goal pursuit).
 ________________________________________
-# Architecture & Components
+2. Architecture & Components
 Context window — The fixed amount of text/tokens an LLM-based agent can “see” at once. Managing what goes in and out of this window is critical for long tasks.
 Retrieval-Augmented Generation (RAG) — Augmenting an agent’s responses by retrieving relevant documents from an external knowledge base at query time.
 Vector store — A database that stores embeddings (numerical representations of text) to enable fast semantic search for memory retrieval.
