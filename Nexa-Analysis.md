@@ -2,13 +2,13 @@
 https://dev.azure.com/hexagonPPMInnerSource/Visualization/_artifacts/feed/PPM/Npm/@ppm%2Fnexa/overview/4.0.0
 
 # NEXA- What happens in Setup phase?
-Step 1: Scan repository
-Step 2a: Detect layers (Backend, Frontend, Native, etc.)
-Step 2b: Map 100% workspace coverage
-Step 2c: Generate repository-structure.md
-Step 3: Launch parallel subagents (one per workspace area)
-Step 4: Verify 100% coverage + create architecture docs
-Step 5: Update copilot-instructions.md
+- Step 1: Scan repository
+- Step 2: Detect layers (Backend, Frontend, Native, etc.)
+- Step 3: Map 100% workspace coverage
+- Step 4: Generate repository-structure.md
+- Step 5: Launch parallel subagents (one per workspace area)
+- Step 6: Verify 100% coverage + create architecture docs
+- Step 7: Update copilot-instructions.md
 ONLY THEN: Show main menu
 
 # Nexa Capabilities
