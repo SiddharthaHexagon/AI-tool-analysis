@@ -89,22 +89,22 @@ ONLY THEN: Show main menu
 
 # How They Work Together
 User activates Nexa mode
-    ↓
+↓
 Nexa.agent.md loads
-    ↓
+↓
 Validates architecture, repository structure
-    ↓
+↓
 Shows main menu (Bug Fixing, Code Review, etc.)
-    ↓
+↓
 User selects workflow (e.g., "1" for Bug Fixing)
-    ↓
+↓
 Nexa.agent.md loads: "nexa guidelines/Speed Up Bug Fixing.md"
-    ↓
+↓
 During execution, Nexa may reference skill files:
-    - If creating a service → Uses #create-webgis-service patterns
-    - If debugging backend → Uses #investigate-backend-bug guidance
-    - If generating tests → Uses #generate-backend-unit-tests templates
-    ↓
+- If creating a service → Uses #create-webgis-service patterns
+- If debugging backend → Uses #investigate-backend-bug guidance
+- If generating tests → Uses #generate-backend-unit-tests templates
+↓
 Skills provide focused, reusable knowledge for specific tasks
 
 # NEXA Skills
