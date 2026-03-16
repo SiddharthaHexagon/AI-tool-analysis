@@ -1,15 +1,25 @@
 # NEXA — Setup & Usage Guide
 https://dev.azure.com/hexagonPPMInnerSource/Visualization/_artifacts/feed/PPM/Npm/@ppm%2Fnexa/overview/4.0.0
 
+# NEXA- What happens in Setup phase?
+Step 1: Scan repository
+Step 2a: Detect layers (Backend, Frontend, Native, etc.)
+Step 2b: Map 100% workspace coverage
+Step 2c: Generate repository-structure.md
+Step 3: Launch parallel subagents (one per workspace area)
+Step 4: Verify 100% coverage + create architecture docs
+Step 5: Update copilot-instructions.md
+ONLY THEN: Show main menu
+
 # Nexa Capabilities
-- 1️⃣ Bug Fixing
-- 2️⃣ Code Review
-- 3️⃣ Test Management
-- 4️⃣ Scrum Management
-- 5️⃣ Architecture Management
-- 6️⃣ Custom Instructions Management
-- 7️⃣ Workflow Diagram Generation
-- 8️⃣ Skill Files Management
+- 1️⃣ Bug Fixing: 7-phase systematic workflow with ADO integration
+- 2️⃣ Code Review: Technology-adaptive review with architecture context
+- 3️⃣ Test Management: Dynamic framework detection + execution validation
+- 4️⃣ Scrum Management: Work items + Sprint wiki automation
+- 5️⃣ Architecture Management: Selective regeneration + gap analysis
+- 6️⃣ Custom Instructions Management: Template creation + standards management
+- 7️⃣ Workflow Diagram Generation: Static/interactive diagram generation
+- 8️⃣ Skill Files Management: Guided authoring + auto-referencing
 
 
 # How Nexa Differs from Other Agent Modes
@@ -40,11 +50,11 @@ https://dev.azure.com/hexagonPPMInnerSource/Visualization/_artifacts/feed/PPM/Np
 **6. Predefined Canonical Content**
 - Uses strict templates per layer (Backend must have: Service Architecture, API Patterns, Caching, etc.)
 
-
 **7. Multi-Workflow Integration**
 -  Integrated menu for Bug Fixing, Code Review, Test Management, Scrum, Architecture Management, Custom Instructions, Workflow Diagrams, Skills
 
 **8. Repository Structure Validation**
+-  \.github\repository-structure.md MUST exist
 -  MUST read repository-structure.md before ANY task (no assumptions about paths)
 
 **9. Dynamic Technology Detection**
@@ -52,5 +62,61 @@ https://dev.azure.com/hexagonPPMInnerSource/Visualization/_artifacts/feed/PPM/Np
 
 **10. Bug Fixing with Context Continuity**
 - Follows strict 7-phase workflow with work item integration, architecture context, test validation
+
+
+# Nexa.agent.md (Agent Mode Definition)
+**Location**: \.github\agents\Nexa.agent.md
+
+**Purpose**: The orchestrator/brain of Nexa Mode itself
+
+**What it contains:**
+
+- Complete mode configuration and execution logic
+- Main menu structure (8 workflow options)
+- Architecture generation protocols
+- Mandatory guidelines and enforcement rules
+- Intent recognition mappings
+- Workflow routing logic
+- Quality gates and validation rules
+- Persistent state management
+- Version control requirements (4.0.0)
+- References to all guidelines and supporting documents
+- Analogy: Operating system or central controller
+
+**Invocation**: Activated when you switch to Nexa mode in GitHub Copilot
+
+**Scope**: Controls the ENTIRE Nexa mode behavior
+
+# How They Work Together
+User activates Nexa mode
+    ↓
+Nexa.agent.md loads
+    ↓
+Validates architecture, repository structure
+    ↓
+Shows main menu (Bug Fixing, Code Review, etc.)
+    ↓
+User selects workflow (e.g., "1" for Bug Fixing)
+    ↓
+Nexa.agent.md loads: "nexa guidelines/Speed Up Bug Fixing.md"
+    ↓
+During execution, Nexa may reference skill files:
+    - If creating a service → Uses #create-webgis-service patterns
+    - If debugging backend → Uses #investigate-backend-bug guidance
+    - If generating tests → Uses #generate-backend-unit-tests templates
+    ↓
+Skills provide focused, reusable knowledge for specific tasks
+
+# NEXA Skills
+
+**NEXA skills**  demonstrate enterprise-level prompt engineering by:
+
+- Encoding Domain Knowledge: classes, services, plugin architecture
+- Enforcing Patterns: Layered architecture, Active Record, event-driven design
+- Reducing Cognitive Load: Developers don't need to remember all patterns
+- Accelerating Onboarding: New team members reference skills instead of digging through docs
+- Maintaining Consistency: All generated code follows established conventions
+
+This approach transforms Copilot from a code completion tool into a project-aware development assistant.
 
 **Bottom Line**: NEXA MODE says, "Let me FIRST understand your ENTIRE canonical architecture with 100% coverage, THEN orchestrate systematic, evidence-based, multi-workflow operations with zero hallucination, persistent state, and architectural integrity enforcement"
