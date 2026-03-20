@@ -3,7 +3,7 @@
 ### **Nexa =  AI-Powered Development Orchestrator**
 
 **Think of Nexa as:**
-- 🧠 **Smart Project Manager** - Understands your entire codebase
+- 🧠 **Smart Project Manager** - Understands entire codebase
 - 🔧 **Automation Engine** - Handles repetitive tasks
 - 📚 **Knowledge Base** - Stores project-specific patterns
 - 🚀 **Productivity Multiplier** - 3-5x faster development
