@@ -1,4 +1,13 @@
 ## **Nexa is a Canonical, Repo-Aware Orchestrator** — Not Just a Coding Assistant
+
+### **Nexa =  AI-Powered Development Orchestrator**
+
+**Think of Nexa as:**
+- 🧠 **Smart Project Manager** - Understands your entire codebase
+- 🔧 **Automation Engine** - Handles repetitive tasks
+- 📚 **Knowledge Base** - Stores project-specific patterns
+- 🚀 **Productivity Multiplier** - 3-5x faster development
+  
 # NEXA — Setup & Usage Guide
 https://dev.azure.com/hexagonPPMInnerSource/Visualization/_artifacts/feed/PPM/Npm/@ppm%2Fnexa/overview/4.0.0
 
