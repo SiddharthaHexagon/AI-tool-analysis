@@ -1,3 +1,4 @@
+## **Nexa is a Canonical, Repo-Aware Orchestrator** — Not Just a Coding Assistant
 # NEXA — Setup & Usage Guide
 https://dev.azure.com/hexagonPPMInnerSource/Visualization/_artifacts/feed/PPM/Npm/@ppm%2Fnexa/overview/4.0.0
 
@@ -22,11 +23,7 @@ ONLY THEN: Show main menu
 - 8️⃣ Skill Files Management: Guided authoring + auto-referencing
 
 
-# How Nexa Differs from Other Agent Modes
-
-## **Nexa is a Canonical, Repo-Aware Orchestrator** — Not Just a Coding Assistant
-
-### 🎯 **Core Differentiators:**
+### 🎯 **Nexa: Core Differentiators:**
 
 **1. Architecture-First Approach**
 -  MANDATORY comprehensive architecture generation before any operations, Nexa has complete context; others make assumptions
