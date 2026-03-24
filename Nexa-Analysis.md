@@ -21,6 +21,42 @@ https://dev.azure.com/hexagonPPMInnerSource/Visualization/_artifacts/feed/PPM/Np
 - Step 7: Update copilot-instructions.md
 ONLY THEN: Show main menu
 
+# Nexa.agent.md (Agent Mode Definition)
+**Location**: \.github\agents\Nexa.agent.md
+
+**Purpose**: The orchestrator/brain of Nexa Mode itself
+
+**What it contains:**
+
+- Complete mode configuration and execution logic
+- Main menu structure (8 workflow options)
+- Architecture generation protocols
+- Mandatory guidelines and enforcement rules
+- Intent recognition mappings
+- Workflow routing logic
+- Quality gates and validation rules
+- Persistent state management
+- Version control requirements (4.0.0)
+- References to all guidelines and supporting documents
+- Analogy: Operating system or central controller
+
+**Invocation**: Activated when you switch to Nexa mode in GitHub Copilot
+
+**Scope**: Controls the ENTIRE Nexa mode behavior
+
+# How They Work Together
+1. User activates Nexa mode
+2. Nexa.agent.md loads
+3. Validates architecture, repository structure
+4. Shows main menu (Bug Fixing, Code Review, etc.)
+5. User selects workflow (e.g., "1" for Bug Fixing)
+6. Nexa.agent.md loads: "nexa guidelines/Speed Up Bug Fixing.md"
+7. During execution, Nexa may reference skill files:
+- If creating a service → Uses #create-webgis-service patterns
+- If debugging backend → Uses #investigate-backend-bug guidance
+- If generating tests → Uses #generate-backend-unit-tests templates
+8. Skills provide focused, reusable knowledge for specific tasks
+
 # Nexa Capabilities
 - 1️⃣ Bug Fixing: 7-phase systematic workflow with ADO integration
 - 2️⃣ Code Review: Technology-adaptive review with architecture context
@@ -99,14 +135,11 @@ ONLY THEN: Show main menu
 3. Validates architecture, repository structure
 4. Shows main menu (Bug Fixing, Code Review, etc.)
 5. User selects workflow (e.g., "1" for Bug Fixing)
-
 6. Nexa.agent.md loads: "nexa guidelines/Speed Up Bug Fixing.md"
-
 7. During execution, Nexa may reference skill files:
 - If creating a service → Uses #create-webgis-service patterns
 - If debugging backend → Uses #investigate-backend-bug guidance
 - If generating tests → Uses #generate-backend-unit-tests templates
-
 8. Skills provide focused, reusable knowledge for specific tasks
 
 # NEXA Skills
